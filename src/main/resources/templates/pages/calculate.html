@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="#" />
+<body>
+  <div th:insert="fragments/navbar.html :: div"> </div>
+  <div style="margin-left:15%">
+
+  <div class="w3-bar w3-dark-grey">
+    <h1 class="w3-bar-item">Calculate</h1>
+    <img th:src="@{../images/gm.png}" class="w3-bar-item" alt="gm" style="width:100px; border-radius:8px; float:right"/>
+  </div>
+
+  <form action="#" th:action="@{../view/calculate}" th:object="${calculateRequest}" method="post">
+    <label for="state">State</label>
+    <select class="form-control" id="state" name="state">
+      <option value="">state</option>
+      <option th:each="state : ${stateList}"
+        th:value="${state}"
+        th:text="${state}">
+      </option>
+    </select>
+
+    <label for="vehicle">Vehicle</label>
+    <select class="form-control" id="vehicle" name="vehicle">
+      <option value="">vehicle</option>
+      <option th:each="vehicle : ${vehicleData}"
+        th:value="${vehicle.model}"
+        th:text="${vehicle.model} + ' (' + ${vehicle.kwh} + 'kwh)'">
+      </option>
+    </select>
+		
+    <label for="percent">Percent</label>
+    <input type="number" th:field="*{percent}" id="percent" placeholder="percent">
+    <span th:if="${#fields.hasErrors('percent')}" th:errors="*{percent}"></span>
+    <input type="submit" value="execute">
+    <p th:if="${calculateRequest.result}" th:text="'result: $' + ${calculateRequest.result}"/>
+  </form>

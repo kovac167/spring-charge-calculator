@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Opendata electricity response",
+  "description": "Schema of the response object, from https://api.eia.gov/v2/electricity/retail-sales/data/",
+  "type": "object",
+  "properties": {
+    "response": {
+      "description": "response object with all data",
+      "type": "object",
+      "properties": {
+        "total": {
+          "description": "total number of entries found, ex: 157",
+          "type": "number"
+        },
+        "data": {
+          "description": "array of data entries",
+          "type": "array"
+        }
+      },
+      "required": [
+        "total",
+        "data"
+      ]
+    }
+  },
+  "required": [
+    "response"
+  ]
+}

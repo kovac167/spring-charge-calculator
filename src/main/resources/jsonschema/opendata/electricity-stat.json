@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Opendata electricity response, individual data entry",
+  "description": "Schema of 1 stat from the data array, embedded within the response object, from https://api.eia.gov/v2/electricity/retail-sales/data/",
+  "type": "object",
+  "properties": {
+    "period": {
+      "description": "date period of entry, ex: 2022-02",
+      "type": "string"
+    },
+    "stateid": {
+      "description": "state abbreviation, ex: AL",
+      "type": "string"
+    },
+    "stateDescription": {
+      "description": "full name of state, ex: Alabama",
+      "type": "string"
+    },
+    "sectorid": {
+      "description": "shortname of sector type, ex: RES",
+      "type": "string"
+    },
+    "sectorName": {
+      "description": "sector type, ex: residential",
+      "type": "string"
+    },
+    "price": {
+      "description": "cents amount as a decimal, ex: 32.15",
+      "type": "number"
+    },
+    "price-units": {
+      "description": "type of price, ex: cents per kilowatthours",
+      "type": "string"
+    }
+  },
+  "required": [
+    "stateid",
+    "sectorid",
+    "price"
+  ]
+}

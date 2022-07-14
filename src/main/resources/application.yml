@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    include: common # application-common.yml
+    active: '@spring.profiles.active@' # environment-based profile

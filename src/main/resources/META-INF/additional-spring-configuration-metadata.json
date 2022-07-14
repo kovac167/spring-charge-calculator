@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "app.opendata.host",
+    "type": "java.lang.String",
+    "description": "A description for 'app.opendata.host'"
+  },
+  {
+    "name": "app.opendata.key",
+    "type": "java.lang.String",
+    "description": "A description for 'app.opendata.key'"
+  },
+  {
+    "name": "app.vehicle-metadata.hummer",
+    "type": "java.lang.String",
+    "description": "A description for 'app.vehicles.hummer'"
+  },
+  {
+    "name": "app.vehicle-metadata.lyriq",
+    "type": "java.lang.String",
+    "description": "A description for 'app.vehicles.lyriq'"
+  },
+  {
+    "name": "app.vehicle-metadata.silverado",
+    "type": "java.lang.String",
+    "description": "A description for 'app.vehicles.silverado'"
+  },
+  {
+    "name": "app.vehicle-metadata.bolt",
+    "type": "java.lang.String",
+    "description": "A description for 'app.vehicles.bolt'"
+  }
+]}

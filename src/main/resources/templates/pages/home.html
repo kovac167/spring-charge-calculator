@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="#" />
+<body>
+  <div th:insert="fragments/navbar.html :: div"> </div>
+  <div style="margin-left:15%">
+
+  <div class="w3-bar w3-dark-grey">
+    <h1 class="w3-bar-item">Home</h1>
+    <img th:src="@{../images/gm.png}" class="w3-bar-item" alt="gm" style="width:100px; border-radius:8px; float:right"/>
+  </div>
+  
+  <div class="w3-container">
+    <p>Spring vehicle-charge-calculator homepage.</p>
+    <p>This app utilizes the US Energy Information Administration's Opendata API.</p>
+    <p>Select <b>Calculate</b> from the menu to get started.</p>
+  </div>
+</body>
